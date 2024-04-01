@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <Folder Include="login\" />
+    <Folder Include="examen2Vistas\" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@ namespace SistemasVentas.DAL
     {
         public DataTable LIstarIngresoDal()
         {
-            string consulta = "select * from ingreso";
+            string consulta = "SELECT p.NOMBRE, SUM(i.TOTAL) AS TotalIngresos\r\nFROM PROVEEDOR p\r\nINNER JOIN INGRESO i ON p.IDPROVEEDOR = i.IDPROVEEDOR\r\nGROUP BY p.NOMBRE;\r\n";
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
 
